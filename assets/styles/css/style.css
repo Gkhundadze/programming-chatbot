@@ -350,7 +350,7 @@ html {
 }
 
 body {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/background.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("assets/images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
