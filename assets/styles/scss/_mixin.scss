@@ -1,0 +1,44 @@
+@mixin flex-spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin container {
+    padding: 20px;
+    background-color: #3D69961A;
+    border-radius: 20px;
+}
+
+@mixin container-h2($contaner-h2-fontSize){
+    font-family: $font-Nino-Mtavruli;
+    font-weight: 700;
+    font-size: $contaner-h2-fontSize;
+    color: white;
+}
+
+@mixin container-p($container-p-lineHeight){
+    font-size: $fz-xl;
+    line-height: $container-p-lineHeight;
+    color: #fff;
+    font-family: $font-Noto;
+    font-weight: 400;
+}
+
+@mixin btn($btn-margin){
+    cursor: pointer;
+    width: 240px;
+    height: 64px;
+    margin: $btn-margin;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
+    font-family: 'Noto Sans Georgian', sans-serif;
+    font-weight: 700;
+}
+
+@mixin figure($figure-bottom){
+    position: absolute;
+    bottom: $figure-bottom;
+}
+
