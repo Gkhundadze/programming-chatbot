@@ -13,6 +13,10 @@
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/background.jpg');
     background-repeat: no-repeat;

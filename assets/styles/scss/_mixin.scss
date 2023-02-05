@@ -5,19 +5,27 @@
 
 @mixin container {
     padding: 20px;
-    background-color: #3D69961A;
+    background-color: rgba(61, 105, 150, 0.1);
     border-radius: 20px;
 }
 
-@mixin container-h2($contaner-h2-fontSize){
+@mixin container-h($container-h-fs){
     font-family: $font-Nino-Mtavruli;
     font-weight: 700;
-    font-size: $contaner-h2-fontSize;
+    font-size: $container-h-fs;
     color: white;
 }
 
 @mixin container-p($container-p-lineHeight){
     font-size: $fz-xl;
+    line-height: $container-p-lineHeight;
+    color: #fff;
+    font-family: $font-Noto;
+    font-weight: 400;
+}
+
+@mixin container-p2($container-p-lineHeight){
+    font-size: $fz-l;
     line-height: $container-p-lineHeight;
     color: #fff;
     font-family: $font-Noto;
@@ -41,4 +49,3 @@
     position: absolute;
     bottom: $figure-bottom;
 }
-
