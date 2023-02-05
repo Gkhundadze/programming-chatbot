@@ -2,19 +2,19 @@ const creators_container = document.querySelector('.creators_container');
 
 let data = [
     {
-        img: '/assets/images/creators/creatorsImg1.png',
+        img: 'assets/images/creators/creatorsImg1.png',
         title: 'ვებ პროგრამირება',
         text: 'მე შემიძლია შენთან ერთად აღმოვაჩნო სიახლეები და მოგაწოდო ბევრი ახალი ინფორმაცია',
 
     },
     {
-        img: '/assets/images/creators/creatorsImg2.png',
+        img: 'assets/images/creators/creatorsImg2.png',
         title: 'ციფრული კომუნიკაციები',
         text: 'მე შემიძლია შენთან ერთად აღმოვაჩნო სიახლეები და მოგაწოდო ბევრი ახალი ინფორმაცია',
 
     },
     {
-        img: '/assets/images/creators/creatorsImg1.png',
+        img: 'assets/images/creators/creatorsImg1.png',
         title: 'გრაფიკული დიზაინი',
         text: 'მე შემიძლია შენთან ერთად აღმოვაჩნო სიახლეები და მოგაწოდო ბევრი ახალი ინფორმაცია',
 
