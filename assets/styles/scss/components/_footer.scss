@@ -1,0 +1,27 @@
+.footer{
+    position: relative;
+    margin-top: 740px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(29, 29, 29, 1);
+    padding: 70px 0;
+    .figure5{
+        position: absolute;
+        left: 200px;
+        top: -130px;
+    }
+    h4{
+        @include container-h(32px);
+        margin-bottom: 40px
+    }
+    p{
+        @include container-p2(24px);
+    }
+
+    .contact{
+        div{
+            display: flex;
+            margin-top: 35px;
+        }
+    }
+}

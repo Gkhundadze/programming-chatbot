@@ -1,0 +1,357 @@
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&display=swap");
+.header {
+  position: fixed;
+  width: 100%;
+  height: 140px;
+  background-color: #1D1D1D;
+  padding-inline: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+.header .uniLabImage {
+  margin-right: 32px;
+}
+.header .nav ul {
+  display: flex;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+.header a {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFFFFF;
+  position: relative;
+  transition: 0.3s;
+}
+.header a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  background-color: #95F364;
+  transition: 0.3s;
+}
+.header a:hover {
+  color: #95F364;
+}
+.header a:hover::before {
+  width: 70%;
+}
+
+/* -- discovery -- */
+.discovery {
+  padding-inline: 130px;
+  padding-top: 315px;
+}
+.discovery .discoveryContent {
+  display: flex;
+  justify-content: space-between;
+}
+.discovery .discoveryContent .discoveryNews {
+  max-width: 870px;
+  padding: 20px;
+  background-color: rgba(61, 105, 150, 0.1);
+  border-radius: 20px;
+}
+.discovery .discoveryContent .discoveryNews h1 {
+  line-height: 74px;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: white;
+}
+.discovery .discoveryContent .discoveryNews h1 span {
+  background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.discovery .discoveryContent .discoveryNews div {
+  margin-right: 65px;
+  margin-top: 40px;
+}
+.discovery .discoveryContent .discoveryNews div p {
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+}
+.discovery .discoveryContent .discoveryNews .discoveryBtn {
+  cursor: pointer;
+  width: 240px;
+  height: 64px;
+  margin: 96px 0 84px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 700;
+}
+
+/* -- whoAmI -- */
+.whoAmI {
+  padding-top: 250px;
+  padding-inline: 200px;
+}
+.whoAmI .whoAmI-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.whoAmI .whoAmI-content .figure1 {
+  position: absolute;
+  right: 0;
+  top: -140px;
+}
+.whoAmI .whoAmI-content .figure2 {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+}
+.whoAmI .whoAmI-content .whoAmI-text {
+  width: 890px;
+  padding: 20px;
+  background-color: rgba(61, 105, 150, 0.1);
+  border-radius: 20px;
+}
+.whoAmI .whoAmI-content .whoAmI-text h2 {
+  margin-bottom: 80px;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+}
+.whoAmI .whoAmI-content .whoAmI-text p {
+  font-size: 24px;
+  line-height: 48px;
+  color: #fff;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+}
+.whoAmI .whoAmI-content .whoAmI-text .whoAmIBtn {
+  cursor: pointer;
+  width: 240px;
+  height: 64px;
+  margin: 64px 0px 0px 0px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 700;
+}
+
+/* -- profile -- */
+.profile {
+  padding-top: 250px;
+  padding-inline: 200px;
+}
+.profile .profileContent {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.profile .profileContent .profileText {
+  padding: 20px;
+  background-color: rgba(61, 105, 150, 0.1);
+  border-radius: 20px;
+  width: 610px;
+}
+.profile .profileContent .profileText .profileObject {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.profile .profileContent .profileText .profileObject div {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.profile .profileContent .profileText .profileObject p {
+  color: #fff;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-size: 24px;
+}
+.profile .profileContent .profileText .profileObject p span {
+  background: linear-gradient(51.51deg, #24E9A6 72.15%, rgba(14, 188, 218, 0) 94.84%), linear-gradient(83.28deg, #24E9A6 61.73%, rgba(14, 188, 218, 0) 75.83%), linear-gradient(43.2deg, #24E9A6 75.79%, rgba(14, 188, 218, 0) 115.95%), linear-gradient(53.52deg, #24E9A6 71.26%, rgba(14, 188, 218, 0) 124.78%), linear-gradient(301.18deg, #24E9A6 68.85%, rgba(14, 188, 218, 0) 98.71%), linear-gradient(52.15deg, #24E9A6 71.86%, rgba(14, 188, 218, 0) 138.89%), linear-gradient(53.32deg, #B9F272 71.34%, rgba(131, 244, 94, 0) 104.75%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+}
+.profile .profileContent .profileText h2 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 37px;
+  margin-left: 25px;
+}
+.profile .profileContent .figure3 {
+  position: absolute;
+  bottom: -120px;
+}
+
+/* creators */
+.creators {
+  padding-top: 250px;
+  padding-inline: 200px;
+  padding-bottom: 210px;
+}
+.creators .creators_title h2 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 95px;
+  text-align: center;
+}
+.creators .creators_container {
+  position: relative;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.creators .creators_container .creators_item {
+  padding: 32px 0 104px 0;
+  background: rgba(0, 16, 35, 0.4);
+  border-radius: 30px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.creators .creators_container .creators_item:hover {
+  background: rgba(0, 28, 62, 0.4);
+}
+.creators .creators_container .creators_item .creators_img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.creators .creators_container p {
+  width: 346px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+}
+.creators .creators_container h3 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 32px;
+}
+.creators .figure4 {
+  right: 0;
+  position: absolute;
+  bottom: -120px;
+}
+
+/* narrative */
+.narrative {
+  position: relative;
+  display: flex;
+  justify-content: right;
+  padding-right: 200px;
+}
+.narrative .narrative-image {
+  position: absolute;
+  left: 15px;
+  top: 138px;
+}
+.narrative .narattive-container {
+  padding: 20px;
+  background-color: rgba(61, 105, 150, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1184px;
+}
+.narrative .narattive-container .narrative-item .narrative-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 28, 62, 0.5);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.narrative .narattive-container .narrative-item h4 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 8px;
+}
+.narrative .narattive-container .narrative-item p {
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+  width: 370px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 740px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(29, 29, 29);
+  padding: 70px 0;
+}
+.footer .figure5 {
+  position: absolute;
+  left: 200px;
+  top: -130px;
+}
+.footer h4 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 40px;
+}
+.footer p {
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+}
+.footer .contact div {
+  display: flex;
+  margin-top: 35px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=style.css.map */
