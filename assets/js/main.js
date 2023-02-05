@@ -24,7 +24,7 @@ let data = [
 let container = '';
 data.forEach((item) => {
     const { img, title, text } = item;
-    container += "<div class='creators_item'><div class='creators_img'><img src="+img+" alt='img'></div><div><h3>"+title+"</h3><p>"+text+"</p></div></div><img class='figure4' src='/assets/images/figure.png' alt='img'>";
+    container += "<div class='creators_item'><div class='creators_img'><img src="+img+" alt='img'></div><div><h3>"+title+"</h3><p>"+text+"</p></div></div><img class='figure4' src='assets/images/figure.png' alt='img'>";
 })
 
 creators_container.innerHTML = container;
