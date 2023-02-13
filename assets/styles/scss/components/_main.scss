@@ -1,0 +1,317 @@
+.background-image{
+    position: fixed;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.message-square {
+    cursor: pointer;
+    --x:-1;
+    position: fixed;
+    z-index: 20;
+    width: 48px;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(269.14deg, #B9F272 -29.08%, #83F45E 116.44%);
+    bottom: 96px;
+    right: 96px;
+    &:hover{
+        background: #82CC26;
+        &::before{
+            background: #82CC26;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: linear-gradient(269.14deg, #83F45E -29.08%, #B9F272 116.44%);
+        transform:scale(var(--x,1),var(--y,1));
+        bottom: -10px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        z-index: -10;
+    }
+}
+
+  
+
+
+/* -- discovery -- */
+.discovery{
+    padding-inline: 130px;
+    padding-top: 315px;
+
+    .discoveryContent{
+        @include flex-spaceBetween;
+
+        .discoveryNews{
+            max-width: 870px;
+            @include container;
+
+            h1{
+                line-height: 74px;
+                @include container-h(64px);
+
+                span{
+                    background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            div {
+                margin-right: 65px;
+                margin-top: 40px;
+                p{
+                    @include container-p(34px);
+                }
+            }
+            .discoveryBtn {
+                @include btn(96px 0 84px 0);
+                &:hover{
+                    background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
+                }
+            }
+        }
+    }
+}
+
+/* -- whoAmI -- */
+.whoAmI{
+    padding-top: $padding-top;
+    padding-inline: $padding-section;
+    .whoAmI-content{
+        @include flex-spaceBetween;
+        position: relative;
+
+        .figure1{
+            position: absolute;
+            right: 0;
+            top: -140px;
+        }
+
+        .figure2{
+            @include figure(-120px);
+            left: 0;
+        }
+
+        .whoAmI-text{
+            width: 890px;
+            @include container;
+            &:hover{
+                background-color: #3D699626;
+            }
+            h2{
+                margin-bottom: 80px;
+                @include container-h(40px);
+            }
+            p{
+                @include container-p(48px);                
+            }
+            .whoAmIBtn{
+                @include btn(64px 0px 0px 0px);
+                &:hover{
+                    background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
+                }
+            }
+        }
+    }
+}
+
+/* -- profile -- */
+.profile{
+    padding-top: $padding-top;
+    padding-inline: $padding-section;
+
+    .profileContent{
+        position: relative;
+        @include flex-spaceBetween;
+        .profileText{
+            @include container;
+            width: 610px;
+
+
+            &:hover{
+                background-color: #0B3D701A;
+            }
+
+            .profileObject{
+                display: flex;
+                flex-direction: column;
+                row-gap: 50px;
+                div{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                }
+                p{
+                    color: #fff;
+                    font-family: "BPG Nino Mtavruli", sans-serif;
+                    font-size: 24px;
+                    span{
+                        background: linear-gradient(51.51deg, #24E9A6 72.15%, rgba(14, 188, 218, 0) 94.84%),
+                                    linear-gradient(83.28deg, #24E9A6 61.73%, rgba(14, 188, 218, 0) 75.83%),
+                                    linear-gradient(43.2deg, #24E9A6 75.79%, rgba(14, 188, 218, 0) 115.95%),
+                                    linear-gradient(53.52deg, #24E9A6 71.26%, rgba(14, 188, 218, 0) 124.78%),
+                                    linear-gradient(301.18deg, #24E9A6 68.85%, rgba(14, 188, 218, 0) 98.71%),
+                                    linear-gradient(52.15deg, #24E9A6 71.86%, rgba(14, 188, 218, 0) 138.89%),
+                                    linear-gradient(53.32deg, #B9F272 71.34%, rgba(131, 244, 94, 0) 104.75%),
+                                    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-family: "BPG Nino Mtavruli", sans-serif;
+                    }
+                }
+            }
+            h2{
+                @include container-h(40px);
+                margin-bottom: 37px;
+                margin-left: 25px;
+            }
+        }
+        .figure3{
+            @include figure(-140px);
+        }
+    }
+}
+
+/* communication */
+
+.communication{
+    padding-top: $padding-top;
+    padding-inline: $padding-section;
+
+    .communication_title h2{
+        @include container-h(40px);
+        margin-bottom: 95px;
+        text-align: center;
+    }
+
+    .communication_container{
+        position: relative;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 16px;
+
+        .communication_item{
+            padding: 32px 0 104px 0;
+            background: rgba(0, 16, 35, 0.4);
+            border-radius: 30px;
+            transition: .3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:nth-child(1){
+                background: #001C3E66;
+            }
+            
+            .communication_img {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 16px;
+                padding: 25px;
+                border-radius: 40px;
+                transition: 0.15s;
+
+                &.img-1{
+                    background-color: #3D96FF;
+                    &:hover{
+                        background-color: #346094;
+                    }
+                }
+                &.img-2{
+                    background-color: #03CAF5;
+                    &:hover{
+                        background-color: #1B92AB;
+                    }
+                }
+                &.img-3{
+                    background: linear-gradient(8.39deg, #B9F272 93.57%, rgba(131, 244, 94, 0) 159.27%);
+                    &:hover{
+                        background: linear-gradient(8.39deg, #7AB631 93.57%, rgba(131, 244, 94, 0) 159.27%);
+                    }
+                }
+
+            }
+        }
+
+        p{
+            width: 346px;
+            @include container-p(32px)
+        }
+        
+        h3{
+            @include container-h(36px);
+            margin-bottom: 32px;
+        }
+    }
+    .figure4{
+        right: 0;
+        @include figure(-120px);
+    }
+}
+
+/* creators */
+
+.creators{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    padding-right: 200px;
+    padding-top: 210px;
+    .creators-image{
+        padding-top: 210px;
+        position: absolute;
+        left: 15px;
+        top: 138px;
+    }
+    .creators-container{
+        z-index: 4;
+        padding: 20px;
+        background-color: rgba(61, 105, 150, 0.1);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 1184px;
+        transition: 0.2s;
+        &:hover{
+            background: rgba(11, 61, 112, 0.1);
+            .creators-item{
+                .creators-icon{
+                        background-color: #164D914D;
+                        filter: hue-rotate(5deg) brightness(0.8) contrast(1.3);
+
+                }
+            }
+        }
+        .creators-item{
+            .creators-icon{
+                width: 80px;
+                height: 80px;
+                background-color: rgba(0, 28, 62, 0.5);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 32px;
+            }
+
+            h4{
+                @include container-h(32px);
+                margin-bottom: 8px;
+            }
+
+            p{
+                @include container-p2(40px);
+                width: 370px;
+            }
+        }
+    }
+}
