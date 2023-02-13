@@ -5,6 +5,15 @@
     justify-content: space-evenly;
     background-color: rgba(29, 29, 29, 1);
     padding: 70px 0;
+
+    .chatbot{
+        width: 390px;
+    }
+
+    .unilab{
+        width: 390px;
+    }
+
     .figure5{
         position: absolute;
         left: 200px;
@@ -12,16 +21,32 @@
     }
     h4{
         @include container-h(32px);
-        margin-bottom: 40px
+        margin-bottom: 40px;
     }
     p{
         @include container-p2(24px);
     }
 
     .contact{
-        div{
+        .contact-flex{
             display: flex;
             margin-top: 35px;
+            div{
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+                img{
+                    position: relative;
+                }
+                &:hover{
+                    img{
+                        filter: hue-rotate(10deg) brightness(0.7) contrast(1.4);
+                    }
+                    p{
+                        font-weight: 700;
+                    }
+                }
+            }
         }
     }
 }
