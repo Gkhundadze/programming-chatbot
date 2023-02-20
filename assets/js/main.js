@@ -33,8 +33,7 @@ data.forEach((item) => {
                 <h3>${title}</h3>
                 <p>${text}</p>
             </div>
-        </div>
-        <img class='figure4' src='assets/images/figure.png' alt='img'>`;
+        </div>`
 })
 
 communication_container.innerHTML = container;
