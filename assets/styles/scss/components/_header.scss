@@ -3,25 +3,58 @@
     width: 100%;
     height: 140px;
     background-color: $bg-color;
-    padding-inline: $padding-section;
+    padding-inline: var(--padding-section);
     align-items: center;
     @include flex-spaceBetween;
     z-index: 999;
+    @include laptop {
+        height: 120px;
+    }
+    @include break(1100px) {
+        height: 100px;
+    }
+    .images{
+        img{
+            @include laptop {
+                height: 56px;
+            }
 
-    .uniLabImage{
-        margin-right: 32px;
+            @include break(1100px) {
+                height: 52px;
+            }
+        }
+        
+        .uniLabImage{
+            margin-right: 32px;
+            @include laptop {
+                margin-right: 25px;
+            }
+
+            @include break(1100px) {
+                margin-right: 15px;
+            }
+        }
     }
 
     .nav ul{
         display: flex;
-        column-gap: 80px;
+        column-gap: 54px;
 
+        @include break(1100px) {
+            column-gap: 36px;
+        }
     }
 
     a{
         font-family: $font-Nino-Mtavruli;
         font-weight: 700;
         font-size: $fz-l;
+        @include laptop {
+            font-size: 17px;
+        }
+        @include break(1100px) {
+            font-size: 13px;
+        }
         color: #FFFFFF;
         position: relative;
         transition: $transition;
@@ -34,6 +67,9 @@
             bottom: -5px;
             background-color: $green;
             transition: $transition;
+            @include laptop {
+                height: 2px;
+            }
         }
 
         &:hover{

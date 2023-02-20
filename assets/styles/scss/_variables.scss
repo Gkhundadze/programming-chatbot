@@ -1,10 +1,41 @@
-$padding-section: 200px;
 $bg-color: #1D1D1D;
 $font-Nino-Mtavruli: "BPG Nino Mtavruli", sans-serif;
 $font-Noto: 'Noto Sans Georgian', sans-serif;
-$fz-l: 20px;
-$fz-xl: 24px;
-
 $green: #95F364;
 $transition: .3s;
 $padding-top: 250px;
+
+
+$fz-l: 20px;
+$fz-xl: 24px;
+
+
+:root{
+    --padding-section: 200px;
+    --container-gap: 100px;
+    --discovery-padding: 130px;
+}
+
+@media screen and (max-width: 1715px) {
+    :root{
+        --padding-section: 100px;
+        --discovery-padding: 100px;
+        --container-gap: 80px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    :root{
+        --padding-section: 70px;
+        --discovery-padding: 70px;
+        --container-gap: 50px;
+    }
+}
+@media screen and (max-width: 970px) {
+    :root{
+        --padding-section: 56px;
+        --discovery-padding: 56px;
+        --container-gap: 30px;
+    }
+}
+

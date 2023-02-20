@@ -8,34 +8,27 @@
     width: 100%;
     z-index: -1;
 }
-
-.message-square {
+.message-square{
     cursor: pointer;
-    --x:-1;
     position: fixed;
-    z-index: 20;
-    width: 48px;
-    height: 40px;
-    border-radius: 5px;
-    background: linear-gradient(269.14deg, #B9F272 -29.08%, #83F45E 116.44%);
+    z-index: 999;
     bottom: 96px;
     right: 96px;
-    &:hover{
-        background: #82CC26;
-        &::before{
-            background: #82CC26;
+    img {
+        @include laptop{
+            position: fixed;
+            width: 40px;
+            bottom: 76px;
+            right: 76px;
         }
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        height: 20px;
-        width: 20px;
-        background: linear-gradient(269.14deg, #83F45E -29.08%, #B9F272 116.44%);
-        transform:scale(var(--x,1),var(--y,1));
-        bottom: -10px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%);
-        z-index: -10;
+        &:hover{
+            filter: hue-rotate(2deg) brightness(0.7) contrast(1.2);
+        }
+        @include break(1100px) {
+            width: 30px;
+            bottom: 56px;
+            right: 56px;
+        }
     }
 }
 
@@ -44,19 +37,29 @@
 
 /* -- discovery -- */
 .discovery{
-    padding-inline: 130px;
+    padding-inline: var(--discovery-padding);
     padding-top: 315px;
+
+    @include laptop {
+        padding-top: 250px;
+    }
+
+    @include break(1100px) {
+        padding-top: 200px
+    }
 
     .discoveryContent{
         @include flex-spaceBetween;
+        column-gap: var(--container-gap);
+        align-items: center;
 
         .discoveryNews{
             max-width: 870px;
             @include container;
-
             h1{
                 line-height: 74px;
                 @include container-h(64px);
+
 
                 span{
                     background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
@@ -66,17 +69,47 @@
                 }
             }
             div {
-                margin-right: 65px;
+                margin-right: 80px;
                 margin-top: 40px;
+                @include laptop {
+                    margin: 30px 48px 0 0;
+                }
                 p{
                     @include container-p(34px);
+                    @include laptop {
+                        line-height: 28px;
+                    }
+
+                    @include break(1100px) {
+                        line-height: 24px;
+                    }
                 }
             }
             .discoveryBtn {
                 @include btn(96px 0 84px 0);
+                @include laptop {
+                    margin: 72px 0 52px 0;
+                }
+                @include break(1100px) {
+                    margin: 32px 0 24px 0;
+                }
                 &:hover{
                     background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
                 }
+            }
+        }
+
+        .discoveryImage img{
+            @include laptop {
+                width: 480px;
+            }
+
+            @include break(1300px) {
+                width: 380px;
+            }
+
+            @include break(1060px) {
+                width: 300px;
             }
         }
     }
@@ -85,24 +118,51 @@
 /* -- whoAmI -- */
 .whoAmI{
     padding-top: $padding-top;
-    padding-inline: $padding-section;
+    @include laptop {
+        padding-top: 200px;
+    }
+    padding-inline: var(--padding-section);
+
+    .whoAmI-image{
+        img {
+            @include laptop {
+                width: 430px;
+            }
+
+            @include break(1300px) {
+                width: 370px;
+            }
+
+            @include break(1060px) {
+                width: 330px;
+            }
+        }
+    }
     .whoAmI-content{
         @include flex-spaceBetween;
+        align-items: center;
         position: relative;
-
+        column-gap: var(--container-gap);
         .figure1{
-            position: absolute;
+            @include figure;
             right: 0;
-            top: -140px;
+            top: -120px;
+            @include laptop {
+                top: -100px;
+            }
         }
 
         .figure2{
-            @include figure(-120px);
+            @include figure;
+            bottom: -120px;
             left: 0;
+            @include laptop {
+                bottom: -100px;
+            }
         }
 
         .whoAmI-text{
-            width: 890px;
+            max-width: 890px;
             @include container;
             &:hover{
                 background-color: #3D699626;
@@ -110,12 +170,25 @@
             h2{
                 margin-bottom: 80px;
                 @include container-h(40px);
+                @include laptop {
+                    margin-bottom: 60px;
+                }  
             }
             p{
-                @include container-p(48px);                
+                @include container-p(48px); 
+                @include laptop {
+                    line-height: 38px;
+                }     
+                @include break(1100px) {
+                    line-height: 30px;
+                }        
             }
             .whoAmIBtn{
                 @include btn(64px 0px 0px 0px);
+                @include laptop {
+                    margin: 40px 0 0 0;
+                }
+
                 &:hover{
                     background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
                 }
@@ -127,16 +200,22 @@
 /* -- profile -- */
 .profile{
     padding-top: $padding-top;
-    padding-inline: $padding-section;
+    padding-inline: var(--padding-section);
+    @include laptop {
+        padding-top: 170px;
+    }
 
     .profileContent{
         position: relative;
         @include flex-spaceBetween;
+        align-items: center;
+        column-gap: var(--container-gap);
         .profileText{
             @include container;
             width: 610px;
-
-
+            @include laptop{
+                width: 520px;
+            }
             &:hover{
                 background-color: #0B3D701A;
             }
@@ -144,29 +223,39 @@
             .profileObject{
                 display: flex;
                 flex-direction: column;
-                row-gap: 50px;
+                row-gap: 30px;
                 div{
                     display: flex;
-                    align-items: center;
+                    align-items: flex-end;
                     column-gap: 10px;
-                }
-                p{
-                    color: #fff;
-                    font-family: "BPG Nino Mtavruli", sans-serif;
-                    font-size: 24px;
-                    span{
-                        background: linear-gradient(51.51deg, #24E9A6 72.15%, rgba(14, 188, 218, 0) 94.84%),
-                                    linear-gradient(83.28deg, #24E9A6 61.73%, rgba(14, 188, 218, 0) 75.83%),
-                                    linear-gradient(43.2deg, #24E9A6 75.79%, rgba(14, 188, 218, 0) 115.95%),
-                                    linear-gradient(53.52deg, #24E9A6 71.26%, rgba(14, 188, 218, 0) 124.78%),
-                                    linear-gradient(301.18deg, #24E9A6 68.85%, rgba(14, 188, 218, 0) 98.71%),
-                                    linear-gradient(52.15deg, #24E9A6 71.86%, rgba(14, 188, 218, 0) 138.89%),
-                                    linear-gradient(53.32deg, #B9F272 71.34%, rgba(131, 244, 94, 0) 104.75%),
-                                    linear-gradient(0deg, #FFFFFF, #FFFFFF);
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
+                    img{
+                        @include laptop {
+                            width: 24px;
+                        }
+                    }
+                    p{
+                        color: #fff;
                         font-family: "BPG Nino Mtavruli", sans-serif;
+                        font-size: 24px;
+                        @include laptop {
+                            font-size: 20px;
+                        }
+                        @include break(1100px) {
+                            font-size: 17px;
+                        }
+                        span{
+                            background: linear-gradient(51.51deg, #24E9A6 72.15%, rgba(14, 188, 218, 0) 94.84%),
+                                        linear-gradient(83.28deg, #24E9A6 61.73%, rgba(14, 188, 218, 0) 75.83%),
+                                        linear-gradient(43.2deg, #24E9A6 75.79%, rgba(14, 188, 218, 0) 115.95%),
+                                        linear-gradient(53.52deg, #24E9A6 71.26%, rgba(14, 188, 218, 0) 124.78%),
+                                        linear-gradient(301.18deg, #24E9A6 68.85%, rgba(14, 188, 218, 0) 98.71%),
+                                        linear-gradient(52.15deg, #24E9A6 71.86%, rgba(14, 188, 218, 0) 138.89%),
+                                        linear-gradient(53.32deg, #B9F272 71.34%, rgba(131, 244, 94, 0) 104.75%),
+                                        linear-gradient(0deg, #FFFFFF, #FFFFFF);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -176,8 +265,29 @@
                 margin-left: 25px;
             }
         }
+        .profileImage{
+            img{
+                @include laptop {
+                    width: 520px;
+                }
+                @include break(1300px) {
+                    width: 450px;
+                }
+
+                @include break(1080px) {
+                    width: 400px;
+                }
+                @include break(970px) {
+                    width: 340px;
+                }
+            }
+        }
         .figure3{
-            @include figure(-140px);
+            @include figure;
+            bottom: -140px;
+            @include laptop {
+                bottom: -100px;
+            }
         }
     }
 }
@@ -186,76 +296,127 @@
 
 .communication{
     padding-top: $padding-top;
-    padding-inline: $padding-section;
-
-    .communication_title h2{
-        @include container-h(40px);
-        margin-bottom: 95px;
-        text-align: center;
+    padding-inline: var(--padding-section);
+    
+    @include laptop{
+        padding-top: 200px
     }
-
-    .communication_container{
+    .communication_content {
         position: relative;
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 16px;
 
-        .communication_item{
-            padding: 32px 0 104px 0;
-            background: rgba(0, 16, 35, 0.4);
-            border-radius: 30px;
-            transition: .3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            &:nth-child(1){
-                background: #001C3E66;
-            }
-            
-            .communication_img {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 16px;
-                padding: 25px;
-                border-radius: 40px;
-                transition: 0.15s;
-
-                &.img-1{
-                    background-color: #3D96FF;
-                    &:hover{
-                        background-color: #346094;
-                    }
-                }
-                &.img-2{
-                    background-color: #03CAF5;
-                    &:hover{
-                        background-color: #1B92AB;
-                    }
-                }
-                &.img-3{
-                    background: linear-gradient(8.39deg, #B9F272 93.57%, rgba(131, 244, 94, 0) 159.27%);
-                    &:hover{
-                        background: linear-gradient(8.39deg, #7AB631 93.57%, rgba(131, 244, 94, 0) 159.27%);
-                    }
-                }
-
-            }
-        }
-
-        p{
-            width: 346px;
-            @include container-p(32px)
+        .communication_title h2{
+            @include container-h(40px);
+            margin-bottom: 95px;
+            text-align: center;
         }
         
-        h3{
-            @include container-h(36px);
-            margin-bottom: 32px;
+        .communication_container{
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 16px;
+    
+            .communication_item{
+                padding: 32px 0 104px 0;
+                background: rgba(0, 16, 35, 0.4);
+                border-radius: 30px;
+                transition: .3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include laptop{
+                    padding: 32px 0 64px 0;
+                }
+
+                @include break(1100px){
+                    border-radius: 20px;
+                }
+
+                @include break(960px) {
+                    padding: 16px 0 18px 0;
+                }
+
+                &:nth-child(1){
+                    background: #001C3E66;
+                }
+                
+                .communication_img {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 16px;
+                    padding: 25px;
+                    border-radius: 40px;
+                    transition: 0.15s;
+                    @include laptop{
+                        border-radius: 34px;
+                    }
+                    @include break(1100px){
+                        border-radius: 25px;
+                        padding: 18px;
+                    }
+                    img{
+                        @include laptop{
+                            width: 54px;
+                        }
+                        @include break(1100px){
+                            width: 38px;
+                        }
+                    }
+                    &.img-1{
+                        background-color: #3D96FF;
+                        &:hover{
+                            background-color: #346094;
+                        }
+                    }
+                    &.img-2{
+                        background-color: #03CAF5;
+                        &:hover{
+                            background-color: #1B92AB;
+                        }
+                    }
+                    &.img-3{
+                        background: linear-gradient(8.39deg, #B9F272 93.57%, rgba(131, 244, 94, 0) 159.27%);
+                        &:hover{
+                            background: linear-gradient(8.39deg, #7AB631 93.57%, rgba(131, 244, 94, 0) 159.27%);
+                        }
+                    }
+    
+                }
+            }
+    
+            p{
+                width: 346px;
+                @include container-p(32px);
+                @include laptop {
+                    width: 300px;
+                    line-height: 28px;
+                }
+                @include break(1100px) {
+                    width: 220px;
+                    line-height: 23px;
+                }
+                @include break(960px) {
+                    width: 180px;
+                    line-height: 20px;
+                }
+            }
+            
+            h3{
+                @include container-h(36px);
+                margin-bottom: 32px;
+                @include laptop {
+                    margin-bottom: 24px;
+                }
+            }
         }
-    }
-    .figure4{
-        right: 0;
-        @include figure(-120px);
+        .figure4{
+            right: 0;
+            @include figure;
+            bottom: -120px;
+            // @include laptop {
+            //     left: 0;
+            // }
+        }
     }
 }
 
@@ -265,25 +426,63 @@
     position: relative;
     display: flex;
     justify-content: right;
-    padding-right: 200px;
-    padding-top: 210px;
+    padding: 210px 200px 0 400px;
+    // @include laptop {
+    //     position: static;
+    //     flex-direction: column;
+    //     padding-inline: 100px;
+    // }
+
+    @include break(1715px) {
+        padding-right: 100px;
+    }
+
+    @include laptop {
+        padding-left: 350px;
+    }
+    @include break(1300px) {
+        padding-right: 70px;
+    }
+    @include break(1100px) {
+        padding-left: 250px;
+    }
+
+    @include break(970px) {
+        padding-right: 56px;
+    }
+
+
     .creators-image{
         padding-top: 210px;
         position: absolute;
         left: 15px;
         top: 138px;
+        // @include laptop {
+        //     padding-top: 0px;
+        //     position: static;
+        // }
+        img {
+            @include laptop {
+                width: 600px;
+            }
+            @include break(1100px) {
+                width: 400px;
+            }
+        }
     }
     .creators-container{
         z-index: 4;
-        padding: 20px;
-        background-color: rgba(61, 105, 150, 0.1);
+        width: 1184px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        width: 1184px;
         transition: 0.2s;
+        // @include laptop {
+        //     width: 100%;
+        //     column-gap: 20px;
+        // }
         &:hover{
-            background: rgba(11, 61, 112, 0.1);
             .creators-item{
+                background: rgba(11, 61, 112, 0.1);
                 .creators-icon{
                         background-color: #164D914D;
                         filter: hue-rotate(5deg) brightness(0.8) contrast(1.3);
@@ -292,6 +491,11 @@
             }
         }
         .creators-item{
+            padding: 20px;
+            background-color: rgba(61, 105, 150, 0.1);
+            @include break(960px) {
+                padding: 14px;
+            }
             .creators-icon{
                 width: 80px;
                 height: 80px;
@@ -301,6 +505,18 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 32px;
+
+                @include laptop {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 15px;
+                }
+
+                img {
+                    @include laptop {
+                        width: 40px
+                    }
+                }
             }
 
             h4{
@@ -310,7 +526,7 @@
 
             p{
                 @include container-p2(40px);
-                width: 370px;
+                max-width: 370px;
             }
         }
     }
