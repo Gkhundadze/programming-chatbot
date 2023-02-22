@@ -39,3 +39,8 @@ $fz-xl: 24px;
     }
 }
 
+@media screen and (max-width: 768px) {
+    :root{
+        --container-gap: 16px;
+    }
+}
