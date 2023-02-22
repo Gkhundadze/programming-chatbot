@@ -13,6 +13,10 @@
     @include break(1100px) {
         height: 100px;
     }
+
+    @include tablet {
+        height: 80px;
+    }
     .images{
         img{
             @include laptop {
@@ -21,6 +25,10 @@
 
             @include break(1100px) {
                 height: 52px;
+            }
+
+            @include tablet {
+                height: 48px;
             }
         }
         
@@ -54,6 +62,9 @@
         }
         @include break(1100px) {
             font-size: 13px;
+        }
+        @include tablet {
+            font-size: 12px;
         }
         color: #FFFFFF;
         position: relative;

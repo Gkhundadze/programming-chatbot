@@ -29,6 +29,12 @@
             bottom: 56px;
             right: 56px;
         }
+
+        @include tablet {
+            width: 24px;
+            bottom: 32px;
+            right: 12px;
+        }
     }
 }
 
@@ -46,6 +52,10 @@
 
     @include break(1100px) {
         padding-top: 200px
+    }
+
+    @include tablet {
+        padding-top: 152px;
     }
 
     .discoveryContent{
@@ -74,6 +84,9 @@
                 @include laptop {
                     margin: 30px 48px 0 0;
                 }
+                @include tablet {
+                    margin: 16px 19px 0 0;
+                }
                 p{
                     @include container-p(34px);
                     @include laptop {
@@ -83,16 +96,23 @@
                     @include break(1100px) {
                         line-height: 24px;
                     }
+
+                    @include tablet {
+                        line-height: 20px;
+                    }
                 }
             }
             .discoveryBtn {
                 @include btn(96px 0 84px 0);
+
                 @include laptop {
                     margin: 72px 0 52px 0;
                 }
+
                 @include break(1100px) {
                     margin: 32px 0 24px 0;
                 }
+
                 &:hover{
                     background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
                 }
@@ -121,6 +141,10 @@
     @include laptop {
         padding-top: 200px;
     }
+    @include tablet {
+        padding-top: 130px;
+    }
+    
     padding-inline: var(--padding-section);
 
     .whoAmI-image{
@@ -134,7 +158,7 @@
             }
 
             @include break(1060px) {
-                width: 330px;
+                width: 316px;
             }
         }
     }
@@ -150,6 +174,9 @@
             @include laptop {
                 top: -100px;
             }
+            @include tablet {
+                top: -60px;
+            }
         }
 
         .figure2{
@@ -159,6 +186,10 @@
             @include laptop {
                 bottom: -100px;
             }
+
+            @include tablet {
+                bottom: -50px;
+            }
         }
 
         .whoAmI-text{
@@ -167,11 +198,18 @@
             &:hover{
                 background-color: #3D699626;
             }
+            @include tablet {
+                padding: 16px 30px 20px 16px;
+                max-width: 300px;
+            }
             h2{
                 margin-bottom: 80px;
                 @include container-h(40px);
                 @include laptop {
                     margin-bottom: 60px;
+                }
+                @include tablet {
+                    margin-bottom: 16px;
                 }  
             }
             p{
@@ -181,7 +219,10 @@
                 }     
                 @include break(1100px) {
                     line-height: 30px;
-                }        
+                }
+                @include tablet {
+                    line-height: 20px;
+                }     
             }
             .whoAmIBtn{
                 @include btn(64px 0px 0px 0px);
@@ -205,6 +246,11 @@
         padding-top: 170px;
     }
 
+    @include tablet {
+        padding-top: 100px;
+    }
+
+
     .profileContent{
         position: relative;
         @include flex-spaceBetween;
@@ -216,6 +262,10 @@
             @include laptop{
                 width: 520px;
             }
+            @include tablet {
+                padding-bottom: 16px;
+                width: 305px;
+            }
             &:hover{
                 background-color: #0B3D701A;
             }
@@ -224,13 +274,23 @@
                 display: flex;
                 flex-direction: column;
                 row-gap: 30px;
+                @include tablet {
+                    row-gap: 16px;
+                }
                 div{
                     display: flex;
                     align-items: flex-end;
                     column-gap: 10px;
+                    @include tablet {
+                        column-gap: 8px;
+                    }
                     img{
                         @include laptop {
                             width: 24px;
+                        }
+
+                        @include tablet {
+                            width: 16px;
                         }
                     }
                     p{
@@ -241,8 +301,13 @@
                             font-size: 20px;
                         }
                         @include break(1100px) {
-                            font-size: 17px;
+                            font-size: 16px;
                         }
+
+                        @include tablet {
+                            font-size: 12px;
+                        }
+
                         span{
                             background: linear-gradient(51.51deg, #24E9A6 72.15%, rgba(14, 188, 218, 0) 94.84%),
                                         linear-gradient(83.28deg, #24E9A6 61.73%, rgba(14, 188, 218, 0) 75.83%),
@@ -263,7 +328,12 @@
                 @include container-h(40px);
                 margin-bottom: 37px;
                 margin-left: 25px;
+                @include tablet {
+                    margin-bottom: 19px;
+                    margin-left: 0;
+                }
             }
+        
         }
         .profileImage{
             img{
@@ -278,7 +348,7 @@
                     width: 400px;
                 }
                 @include break(970px) {
-                    width: 340px;
+                    width: 320px;
                 }
             }
         }
@@ -287,6 +357,10 @@
             bottom: -140px;
             @include laptop {
                 bottom: -100px;
+            }
+
+            @include tablet {
+                bottom: -50px;
             }
         }
     }
@@ -299,8 +373,13 @@
     padding-inline: var(--padding-section);
     
     @include laptop{
-        padding-top: 200px
+        padding-top: 200px;
     }
+
+    @include tablet {
+        padding-top: 100px;
+    }
+
     .communication_content {
         position: relative;
 
@@ -308,6 +387,9 @@
             @include container-h(40px);
             margin-bottom: 95px;
             text-align: center;
+            @include tablet {
+                margin-bottom: 40px;
+            }
         }
         
         .communication_container{
@@ -336,6 +418,10 @@
                     padding: 16px 0 18px 0;
                 }
 
+                @include tablet {
+                    border-radius: 10px;
+                }
+
                 &:nth-child(1){
                     background: #001C3E66;
                 }
@@ -354,12 +440,22 @@
                         border-radius: 25px;
                         padding: 18px;
                     }
+                    @include tablet {
+                        border-radius: 13px;
+                        padding: 12px;
+                        margin-bottom: 8px;
+                    }
                     img{
-                        @include laptop{
+                        @include laptop {
                             width: 54px;
                         }
-                        @include break(1100px){
+
+                        @include break(1100px) {
                             width: 38px;
+                        }
+
+                        @include tablet {
+                            width: 32px;
                         }
                     }
                     &.img-1{
@@ -407,15 +503,19 @@
                 @include laptop {
                     margin-bottom: 24px;
                 }
+                @include tablet {
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
             }
         }
         .figure4{
             right: 0;
             @include figure;
             bottom: -120px;
-            // @include laptop {
-            //     left: 0;
-            // }
+            @include tablet {
+                bottom: -60px;
+            }
         }
     }
 }
@@ -427,11 +527,7 @@
     display: flex;
     justify-content: right;
     padding: 210px 200px 0 400px;
-    // @include laptop {
-    //     position: static;
-    //     flex-direction: column;
-    //     padding-inline: 100px;
-    // }
+
 
     @include break(1715px) {
         padding-right: 100px;
@@ -440,9 +536,11 @@
     @include laptop {
         padding-left: 350px;
     }
+
     @include break(1300px) {
         padding-right: 70px;
     }
+    
     @include break(1100px) {
         padding-left: 250px;
     }
@@ -451,22 +549,26 @@
         padding-right: 56px;
     }
 
+    @include tablet {
+        padding-left: 56px;
+        padding-top: 100px;
+    }
 
     .creators-image{
         padding-top: 210px;
         position: absolute;
         left: 15px;
         top: 138px;
-        // @include laptop {
-        //     padding-top: 0px;
-        //     position: static;
-        // }
+
         img {
             @include laptop {
                 width: 600px;
             }
             @include break(1100px) {
                 width: 400px;
+            }
+            @include tablet {
+                display: none;
             }
         }
     }
@@ -476,10 +578,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         transition: 0.2s;
-        // @include laptop {
-        //     width: 100%;
-        //     column-gap: 20px;
-        // }
+        @include tablet {
+            column-gap: 16px;
+        }
         &:hover{
             .creators-item{
                 background: rgba(11, 61, 112, 0.1);
@@ -490,12 +591,33 @@
                 }
             }
         }
+        @include tablet {
+            &:hover{
+                .creators-item{
+                    background: rgba(61, 105, 150, 0.1);
+                    .creators-icon{
+                            background-color: #001C3E80;
+                            filter: none;
+                    }
+                }
+            }
+        }
         .creators-item{
             padding: 20px;
             background-color: rgba(61, 105, 150, 0.1);
             @include break(960px) {
-                padding: 14px;
+                padding: 13px;
             }
+
+            &:hover{
+                    background: rgba(11, 61, 112, 0.1);
+                    .creators-icon{
+                            background-color: #164D914D;
+                            filter: hue-rotate(5deg) brightness(0.8) contrast(1.3);
+    
+                    }
+            }
+
             .creators-icon{
                 width: 80px;
                 height: 80px;
@@ -512,16 +634,30 @@
                     border-radius: 15px;
                 }
 
+                @include tablet {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 10px;
+                    margin: 8px auto;
+                }
+
                 img {
                     @include laptop {
-                        width: 40px
+                        width: 40px;
+                    }
+
+                    @include tablet {
+                        width: 32px;
                     }
                 }
             }
 
             h4{
                 @include container-h(32px);
-                margin-bottom: 8px;
+                margin-bottom: 12px;
+                @include tablet {
+                    text-align: center;
+                }
             }
 
             p{

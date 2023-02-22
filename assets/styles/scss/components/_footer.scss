@@ -8,27 +8,47 @@
     @include laptop {
         margin-top: 600px;
     }
+
     @include break(1100px) {
         margin-top: 350px;
         padding: 50px 0;
     }
+
+    @include tablet {
+        margin-top: 108px;
+        padding: 16px 0 22px 0;
+        justify-content: center;
+        column-gap: 45px;
+    }
     .chatbot{
         width: 390px;
+
         @include laptop {
             width: 300px;
         }
+
         @include break(1100px) {
             width: 260px;
+        }
+
+        @include tablet {
+            width: 240px;
         }
     }
 
     .unilab{
         width: 390px;
+
         @include laptop {
             width: 300px;
         }
+        
         @include break(1100px) {
             width: 260px;
+        }
+
+        @include tablet {
+            width: 240px;
         }
     }
 
@@ -40,10 +60,18 @@
             top: -80px;
             left: 100px;
         }
+
+        @include tablet {
+            top: -60px;
+            left: 56px;
+        }
     }
     h4{
         @include container-h(32px);
         margin-bottom: 40px;
+        @include tablet {
+            margin-bottom: 19px;
+        }
     }
     p{
         @include container-p2(24px);
@@ -66,6 +94,11 @@
                 @include laptop {
                     column-gap: 15px;
                 }
+
+                @include tablet {
+                    column-gap: 10px;
+                }
+
                 img{
                     position: relative;
                     @include laptop {
