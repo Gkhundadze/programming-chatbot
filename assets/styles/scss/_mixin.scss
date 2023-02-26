@@ -4,9 +4,12 @@
 }
 
 @mixin container {
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     background-color: rgba(61, 105, 150, 0.1);
     border-radius: 20px;
+    @include tablet {
+        padding: 16px 16px 0 16px;
+    }
 }
 
 @mixin container-h($container-h-fs){
@@ -28,7 +31,12 @@
         @include break(1100px) {
             line-height: 36px;
             font-size: 28px;
-        }  
+        }
+
+        @include tablet {
+            line-height: 28px;
+            font-size: 24px;
+        }
     }
 
     @if($container-h-fs == 40px) {
@@ -37,6 +45,9 @@
         }
         @include break(1300px) {
             font-size: 28px;
+        }
+        @include tablet {
+            font-size: 16px;
         }
     }
 
@@ -60,9 +71,15 @@
         @include laptop {
             font-size: 23px;
         }
+
         @include break(1100px) {
             font-size: 18px;
         }
+        
+        @include tablet {
+            font-size: 16px;
+        }
+
     }
 }
 
@@ -95,8 +112,11 @@
         line-height: 28px;
     }
     @include break(1100px) {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 24px;
+    }
+    @include tablet {
+        line-height: 18px;
     }
 }
 
@@ -122,6 +142,13 @@
         height: 47px;
         font-size: 15px;
     }
+
+    @include tablet {
+        width: 140px;
+        height: 32px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
 }
 
 @mixin figure(){
@@ -131,6 +158,10 @@
     }
     @include break(1100px) {
         width: 400px;
+    }
+
+    @include tablet {
+        width: 356px;
     }
 }
 
