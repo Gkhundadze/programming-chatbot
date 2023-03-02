@@ -65,6 +65,10 @@
         @include break(960px) {
             font-size: 16px;
         }
+
+        @include break(550px) {
+            font-size: 14px;
+        }
     }
 
     @if($container-h-fs == 32px) {
@@ -80,6 +84,9 @@
             font-size: 16px;
         }
 
+        @include break(550px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -98,6 +105,7 @@
     @include break(960px) {
         font-size: 14px;
     }  
+
 }
 
 @mixin container-p2($container-p-lineHeight){
@@ -117,6 +125,10 @@
     }
     @include tablet {
         line-height: 18px;
+    }
+
+    @include break(550px) {
+        font-size: 10px;
     }
 }
 
@@ -162,6 +174,13 @@
 
     @include tablet {
         width: 356px;
+    }
+
+    @include break(600px) {
+        width: 245px;
+    }
+    @include break(460px) {
+        width: 165px;
     }
 }
 
