@@ -4,9 +4,12 @@
 }
 
 @mixin container {
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     background-color: rgba(61, 105, 150, 0.1);
     border-radius: 20px;
+    @include tablet {
+        padding: 16px 16px 0 16px;
+    }
 }
 
 @mixin container-h($container-h-fs){
@@ -14,6 +17,77 @@
     font-weight: 700;
     font-size: $container-h-fs;
     color: white;
+    @if($container-h-fs == 64px) {
+        @include laptop {
+            line-height: 58px;
+            font-size: 54px;
+        }
+
+        @include break(1360px) {
+            line-height: 46px;
+            font-size: 40px;
+        }  
+
+        @include break(1100px) {
+            line-height: 36px;
+            font-size: 28px;
+        }
+
+        @include tablet {
+            line-height: 28px;
+            font-size: 24px;
+        }
+    }
+
+    @if($container-h-fs == 40px) {
+        @include laptop {
+            font-size: 34px;
+        }
+        @include break(1300px) {
+            font-size: 28px;
+        }
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+
+    @if($container-h-fs == 36px) {
+        @include laptop {
+            font-size: 27px;
+        }
+        @include break(1300px) {
+            font-size: 24px;
+        }
+        @include break(1100px) {
+            font-size: 20px;
+        }
+
+        @include break(960px) {
+            font-size: 16px;
+        }
+
+        @include break(550px) {
+            font-size: 14px;
+        }
+    }
+
+    @if($container-h-fs == 32px) {
+        @include laptop {
+            font-size: 23px;
+        }
+
+        @include break(1100px) {
+            font-size: 18px;
+        }
+        
+        @include tablet {
+            font-size: 16px;
+        }
+
+        @include break(550px) {
+            font-size: 14px;
+        }
+    }
 }
 
 @mixin container-p($container-p-lineHeight){
@@ -22,6 +96,16 @@
     color: #fff;
     font-family: $font-Noto;
     font-weight: 400;
+    @include laptop {
+        font-size: 18px;
+    }
+    @include break(1100px) {
+        font-size: 15px;
+    }  
+    @include break(960px) {
+        font-size: 14px;
+    }  
+
 }
 
 @mixin container-p2($container-p-lineHeight){
@@ -30,6 +114,22 @@
     color: #fff;
     font-family: $font-Noto;
     font-weight: 400;
+
+    @include laptop {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    @include break(1100px) {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    @include tablet {
+        line-height: 18px;
+    }
+
+    @include break(550px) {
+        font-size: 10px;
+    }
 }
 
 @mixin btn($btn-margin){
@@ -43,9 +143,44 @@
     background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
     font-family: 'Noto Sans Georgian', sans-serif;
     font-weight: 700;
+
+    @include laptop {
+        width: 180px;
+        height: 56px;
+        font-size: 17px;
+    }
+    @include break(1100px) {
+        width: 160px;
+        height: 47px;
+        font-size: 15px;
+    }
+
+    @include tablet {
+        width: 140px;
+        height: 32px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
 }
 
-@mixin figure($figure-bottom){
+@mixin figure(){
     position: absolute;
-    bottom: $figure-bottom;
+    @include laptop {
+        width: 500px;
+    }
+    @include break(1100px) {
+        width: 400px;
+    }
+
+    @include tablet {
+        width: 356px;
+    }
+
+    @include break(600px) {
+        width: 245px;
+    }
+    @include break(460px) {
+        width: 165px;
+    }
 }
+

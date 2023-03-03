@@ -5,23 +5,105 @@
     justify-content: space-evenly;
     background-color: rgba(29, 29, 29, 1);
     padding: 70px 0;
+    @include laptop {
+        margin-top: 600px;
+    }
+
+    @include break(1100px) {
+        margin-top: 350px;
+        padding: 50px 0;
+    }
+
+    @include tablet {
+        margin-top: 108px;
+        padding: 16px 0 22px 0;
+        justify-content: center;
+        column-gap: 45px;
+    }
+
+    @include break(620px) {
+        column-gap: 0px;
+    }
+
+    @include break(520px) {
+        margin-top: 75px;
+    }
 
     .chatbot{
         width: 390px;
+
+        @include laptop {
+            width: 300px;
+        }
+
+        @include break(1100px) {
+            width: 260px;
+        }
+
+        @include tablet {
+            width: 240px;
+        }
+
+        @include break(550px) {
+            width: 175px;
+        }
     }
 
     .unilab{
         width: 390px;
+
+        @include laptop {
+            width: 300px;
+        }
+        
+        @include break(1100px) {
+            width: 260px;
+        }
+
+        @include tablet {
+            width: 240px;
+        }
+        @include break(550px) {
+            width: 162px;
+        }
     }
 
     .figure5{
-        position: absolute;
+        @include figure;
         left: 200px;
         top: -130px;
+        @include break(1100px){
+            top: -80px;
+            left: 100px;
+        }
+
+        @include tablet {
+            top: -60px;
+            left: 56px;
+        }
+
+        @include break(520px) {
+            top: -50px;
+        }
+
+        @include break(450px) {
+            left: 30px;
+        }
+
+        @include break(380px) {
+            left: 16px;
+        }
     }
     h4{
         @include container-h(32px);
         margin-bottom: 40px;
+        @include tablet {
+            margin-bottom: 19px;
+        }
+
+        @include break(550px) {
+            font-size: 12px
+        }
     }
     p{
         @include container-p2(24px);
@@ -31,12 +113,44 @@
         .contact-flex{
             display: flex;
             margin-top: 35px;
+            @include laptop {
+                margin-top: 23px;
+            }
+            @include break(1100px) {
+                margin-top: 17px;
+            }
+
+            @include break(550px) {
+                margin-top: 8px;
+            }
+
             div{
                 display: flex;
                 align-items: center;
                 column-gap: 20px;
+                @include laptop {
+                    column-gap: 15px;
+                }
+
+                @include tablet {
+                    column-gap: 10px;
+                }
+
+                @include break(550px) {
+                    column-gap: 5px;
+                }
                 img{
                     position: relative;
+                    @include laptop {
+                        width: 20px;
+                    }
+                    @include break(1100px) {
+                        width: 16px;
+                    }
+
+                    @include break(420px) {
+                        width: 10px;
+                    }
                 }
                 &:hover{
                     img{

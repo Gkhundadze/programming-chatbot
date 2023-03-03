@@ -1,0 +1,17 @@
+@mixin break($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1540px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
