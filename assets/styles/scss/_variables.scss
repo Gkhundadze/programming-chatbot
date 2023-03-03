@@ -44,3 +44,19 @@ $fz-xl: 24px;
         --container-gap: 16px;
     }
 }
+
+@media screen and (max-width: 580px) {
+    :root{
+        --padding-section: 25px;
+        --discovery-padding: 25px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    :root{
+        --padding-section: 16px;
+        --discovery-padding: 16px;
+    }
+}
+
+

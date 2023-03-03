@@ -20,6 +20,10 @@
         height: 80px;
     }
 
+    @include break(460px) {
+        height: 96px;
+    }
+
     .images {
         img {
             @include laptop {
