@@ -58,14 +58,40 @@
         padding-top: 152px;
     }
 
+    .mobile-title{
+        line-height: 74px;
+        display: none;
+        @include container-h(64px);
+        margin-bottom: 5px;
+        span{
+            background: -webkit-linear-gradient(90deg, #B9F272 -15%, #83F45E 126.67%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @include break(520px) {
+            display: block;
+        }
+    }
+
     .discoveryContent{
         @include flex-spaceBetween;
         column-gap: var(--container-gap);
         align-items: center;
 
+        @include break(410px) {
+            column-gap: 3px;
+        }
+
         .discoveryNews{
             max-width: 870px;
             @include container;
+
+
+            @include break(410px) {
+                padding: 6px;
+            }
+
             h1{
                 line-height: 74px;
                 @include container-h(64px);
@@ -77,6 +103,9 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
+                @include break(520px) {
+                    display: none;
+                }
             }
             div {
                 margin-right: 80px;
@@ -86,6 +115,9 @@
                 }
                 @include tablet {
                     margin: 16px 19px 0 0;
+                }
+                @include break(520px) {
+                    margin: 0;
                 }
                 p{
                     @include container-p(34px);
@@ -100,6 +132,8 @@
                     @include tablet {
                         line-height: 20px;
                     }
+
+
                 }
             }
             .discoveryBtn {
@@ -116,20 +150,47 @@
                 &:hover{
                     background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
                 }
+
+                @include break(410px) {
+                    display: none;
+                }
             }
         }
 
-        .discoveryImage img{
-            @include laptop {
-                width: 480px;
+        .discoveryImage {
+            img{
+                @include laptop {
+                    width: 480px;
+                }
+    
+                @include break(1300px) {
+                    width: 380px;
+                }
+    
+                @include break(1060px) {
+                    width: 300px;
+                }
+    
+                @include break(660px) {
+                    width: 185px;
+                }
             }
 
-            @include break(1300px) {
-                width: 380px;
-            }
+            .mobile-discoveryBtn {
+                display: none;
+                @include btn(96px 0 84px 0);
 
-            @include break(1060px) {
-                width: 300px;
+                @include break(1100px) {
+                    margin: 32px 0 20px 0;
+                }
+                &:hover{
+                    background: linear-gradient(90deg, #82CC26 -15%, #82CC26 126.67%);
+                }
+
+                @include break(410px) {
+                    display: block;
+                    margin-left: 30px;
+                }
             }
         }
     }
@@ -143,6 +204,10 @@
     }
     @include tablet {
         padding-top: 130px;
+    }
+
+    @include break(520px) {
+        padding-top: 50px;
     }
     
     padding-inline: var(--padding-section);
@@ -160,6 +225,13 @@
             @include break(1060px) {
                 width: 316px;
             }
+
+            @include break(710px) {
+                width: 210px;
+            }
+            @include break(520px) {
+                width: 240px;
+            }
         }
     }
     .whoAmI-content{
@@ -167,6 +239,12 @@
         align-items: center;
         position: relative;
         column-gap: var(--container-gap);
+
+        @include break(520px) {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+
         .figure1{
             @include figure;
             right: 0;
@@ -176,6 +254,10 @@
             }
             @include tablet {
                 top: -60px;
+            }
+            
+            @include break(520px) {
+                top: -25px;
             }
         }
 
@@ -190,6 +272,11 @@
             @include tablet {
                 bottom: -50px;
             }
+
+            @include break(520px) {
+                bottom: -40px;
+            }
+
         }
 
         .whoAmI-text{
@@ -202,6 +289,11 @@
                 padding: 16px 30px 20px 16px;
                 max-width: 300px;
             }
+            @include break(520px) {
+                padding: 12px 8px 14px 8px;
+                max-width: 100%;
+            }
+
             h2{
                 margin-bottom: 80px;
                 @include container-h(40px);
@@ -227,7 +319,11 @@
             .whoAmIBtn{
                 @include btn(64px 0px 0px 0px);
                 @include laptop {
-                    margin: 40px 0 0 0;
+                    margin: 40px 0px 0px 0px;
+                }
+
+                @include break(520px) {
+                    margin-top: 16px;
                 }
 
                 &:hover{
@@ -250,6 +346,10 @@
         padding-top: 100px;
     }
 
+    @include break(520px) {
+        padding-top: 65px;
+        padding-bottom: 90px;
+    }
 
     .profileContent{
         position: relative;
@@ -266,6 +366,15 @@
                 padding-bottom: 16px;
                 width: 305px;
             }
+            
+                        @include break(520px) {
+                            padding: 8px;
+                        }
+
+            @include break(400px) {
+                width: 250px;
+            }
+
             &:hover{
                 background-color: #0B3D701A;
             }
@@ -350,6 +459,17 @@
                 @include break(970px) {
                     width: 320px;
                 }
+                
+                @include break(700px) {
+                    width: 200px;
+                }
+
+                @include break(515px) {
+                    width: 170px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -125px;
+                }
             }
         }
         .figure3{
@@ -361,6 +481,10 @@
 
             @include tablet {
                 bottom: -50px;
+            }
+
+            @include break(520px) {
+                bottom: -160px;
             }
         }
     }
@@ -380,6 +504,10 @@
         padding-top: 100px;
     }
 
+    @include break(550px) {
+        padding-inline: 8px;
+    }
+
     .communication_content {
         position: relative;
 
@@ -390,6 +518,10 @@
             @include tablet {
                 margin-bottom: 40px;
             }
+
+            @include break(400px) {
+                font-size: 15px;
+            }
         }
         
         .communication_container{
@@ -398,6 +530,17 @@
             grid-template-columns: repeat(3, 1fr);
             column-gap: 16px;
     
+            @include break(720px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 16px;
+            }
+
+            @include break(550px) {
+                gap: 8px;
+            }
+
             .communication_item{
                 padding: 32px 0 104px 0;
                 background: rgba(0, 16, 35, 0.4);
@@ -420,6 +563,15 @@
 
                 @include tablet {
                     border-radius: 10px;
+
+                }
+                @include break(720px) {
+                    width: 208px;
+                }
+
+                @include break(550px) {
+                    width: 168px;
+                    column-gap: 16px;
                 }
 
                 &:nth-child(1){
@@ -445,6 +597,13 @@
                         padding: 12px;
                         margin-bottom: 8px;
                     }
+
+                    @include break(550px) {
+                        padding: 7px;
+                        border-radius: 8px;
+                        margin-bottom: 16px;
+                    }
+
                     img{
                         @include laptop {
                             width: 54px;
@@ -456,6 +615,10 @@
 
                         @include tablet {
                             width: 32px;
+                        }
+
+                        @include break(550px) {
+                            width: 24px;
                         }
                     }
                     &.img-1{
@@ -495,6 +658,13 @@
                     width: 180px;
                     line-height: 20px;
                 }
+                @include break(550px) {
+                    width: 150px;
+                    padding-left: 5px;
+                    font-size: 12px;
+                }
+
+
             }
             
             h3{
@@ -507,6 +677,9 @@
                     text-align: center;
                     margin-bottom: 16px;
                 }
+                @include break(550px) {
+                    margin-bottom: 8px;
+                }
             }
         }
         .figure4{
@@ -516,6 +689,11 @@
             @include tablet {
                 bottom: -60px;
             }
+
+            @include break(520px) {
+                bottom: -40px;
+            }
+            
         }
     }
 }
@@ -554,6 +732,18 @@
         padding-top: 100px;
     }
 
+    @include break(580px) {
+        padding-inline: 25px;
+    }
+
+    @include break(520px) {
+        padding-top: 65px;
+    }
+
+    @include break(470px) {
+        padding-inline: 16px;
+    }
+
     .creators-image{
         padding-top: 210px;
         position: absolute;
@@ -578,9 +768,22 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         transition: 0.2s;
+        align-items: center;
         @include tablet {
             column-gap: 16px;
         }
+
+        @include break(670px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 16px;
+        }
+
+        @include break(550px) {
+            gap: 8px;
+        }
+
         &:hover{
             .creators-item{
                 background: rgba(11, 61, 112, 0.1);
@@ -602,11 +805,21 @@
                 }
             }
         }
+
+        .mobile-creators-image {
+            display: none;
+            @include break(460px) {
+                display: block;
+            }
+            img {
+                width: 160px;
+            }
+        }
         .creators-item{
             padding: 20px;
             background-color: rgba(61, 105, 150, 0.1);
             @include break(960px) {
-                padding: 13px;
+                padding: 10px;
             }
 
             @include tablet {
@@ -620,6 +833,13 @@
                 }
             }
 
+            @include break(670px) {
+                width: 208px;
+            }
+            @include break(550px) {
+                width: 160px;
+                padding-top: 0;
+            }
             .creators-icon{
                 width: 80px;
                 height: 80px;
@@ -643,6 +863,12 @@
                     margin: 8px auto;
                 }
 
+                @include break(550px) {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 8px;
+                }
+
                 img {
                     @include laptop {
                         width: 40px;
@@ -650,6 +876,10 @@
 
                     @include tablet {
                         width: 32px;
+                    }
+
+                    @include break(550px) {
+                        width: 24px;
                     }
                 }
             }
@@ -664,7 +894,10 @@
 
             p{
                 @include container-p2(40px);
-                max-width: 370px;
+
+                @include break(550px) {
+                    font-size: 12px;
+                }
             }
         }
     }
