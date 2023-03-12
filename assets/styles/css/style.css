@@ -1,5 +1,3 @@
-@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -55,6 +53,14 @@ html {
     --padding-section: 16px;
     --discovery-padding: 16px;
   }
+}
+@font-face {
+  font-family: "BPG Nino Mtavruli";
+  src: url("../../fonts/bpg-nino-mtavruli-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans Georgian";
+  src: url("../../fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf") format("truetype");
 }
 .header {
   position: fixed;
