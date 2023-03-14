@@ -121,9 +121,37 @@ html {
     margin-right: 15px;
   }
 }
+@media screen and (min-width: 769px) {
+  .header .nav {
+    height: auto !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .header .nav {
-    display: none;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-color: #1D1D1D;
+    height: 0;
+    transition: 0.3s;
+    padding-inline: 56px;
+    z-index: 1;
+  }
+  .header .nav ul {
+    padding: 5px 0 15px 0;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header .nav {
+    padding-inline: 25px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .header .nav {
+    padding-inline: 16px;
   }
 }
 .header .nav ul {
@@ -157,7 +185,10 @@ html {
 }
 @media screen and (max-width: 768px) {
   .header .nav ul a {
-    font-size: 12px;
+    font-size: 15px;
+    display: block;
+    padding: 17px 0 13px 0;
+    align-items: center;
   }
 }
 .header .nav ul a::before {
@@ -169,9 +200,21 @@ html {
   background-color: #95F364;
   transition: 0.3s;
 }
-@media screen and (max-width: 1540px) {
+@media screen and (max-width: 768px) {
   .header .nav ul a::before {
-    height: 2px;
+    left: -10px;
+    width: 2px !important;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .nav ul a:hover {
+    color: #95F364;
+  }
+  .header .nav ul a:hover::before {
+    height: 70%;
   }
 }
 .header .nav ul a:hover {
@@ -180,11 +223,11 @@ html {
 .header .nav ul a:hover::before {
   width: 70%;
 }
-.header .openNavbar {
+.header .navbar {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  .header .openNavbar {
+  .header .navbar {
     cursor: pointer;
     display: block;
   }
@@ -312,7 +355,7 @@ html {
   }
 }
 .discovery .discoveryContent .discoveryNews {
-  max-width: 870px;
+  max-width: 871px;
   padding: 20px 20px 20px 20px;
   background-color: rgba(61, 105, 150, 0.1);
   border-radius: 20px;
@@ -320,6 +363,11 @@ html {
 @media screen and (max-width: 768px) {
   .discovery .discoveryContent .discoveryNews {
     padding: 16px 16px 0 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .discovery .discoveryContent .discoveryNews {
+    max-width: 660px;
   }
 }
 @media screen and (max-width: 410px) {
@@ -477,25 +525,8 @@ html {
     display: none;
   }
 }
-@media screen and (max-width: 1540px) {
-  .discovery .discoveryContent .discoveryImage img {
-    width: 480px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .discovery .discoveryContent .discoveryImage img {
-    width: 380px;
-  }
-}
-@media screen and (max-width: 1060px) {
-  .discovery .discoveryContent .discoveryImage img {
-    width: 300px;
-  }
-}
-@media screen and (max-width: 660px) {
-  .discovery .discoveryContent .discoveryImage img {
-    width: 185px;
-  }
+.discovery .discoveryContent .discoveryImage img {
+  width: 100%;
 }
 .discovery .discoveryContent .discoveryImage .mobile-discoveryBtn {
   display: none;
@@ -567,30 +598,13 @@ html {
     padding-top: 50px;
   }
 }
-@media screen and (max-width: 1540px) {
-  .whoAmI .whoAmI-image img {
-    width: 430px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .whoAmI .whoAmI-image img {
-    width: 370px;
-  }
-}
-@media screen and (max-width: 1060px) {
-  .whoAmI .whoAmI-image img {
-    width: 316px;
-  }
-}
-@media screen and (max-width: 710px) {
-  .whoAmI .whoAmI-image img {
-    width: 210px;
-  }
-}
 @media screen and (max-width: 520px) {
-  .whoAmI .whoAmI-image img {
-    width: 240px;
+  .whoAmI .whoAmI-image {
+    margin-inline: 45px;
   }
+}
+.whoAmI .whoAmI-image img {
+  width: 100%;
 }
 .whoAmI .whoAmI-content {
   display: flex;
@@ -713,13 +727,12 @@ html {
 @media screen and (max-width: 768px) {
   .whoAmI .whoAmI-content .whoAmI-text {
     padding: 16px 30px 20px 16px;
-    max-width: 300px;
+    max-width: 500px;
   }
 }
 @media screen and (max-width: 520px) {
   .whoAmI .whoAmI-content .whoAmI-text {
     padding: 12px 8px 14px 8px;
-    max-width: 100%;
   }
 }
 .whoAmI .whoAmI-content .whoAmI-text h2 {
@@ -854,7 +867,7 @@ html {
     padding-top: 100px;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 530px) {
   .profile {
     padding-top: 65px;
     padding-bottom: 90px;
@@ -879,25 +892,16 @@ html {
     padding: 16px 16px 0 16px;
   }
 }
-@media screen and (max-width: 1540px) {
-  .profile .profileContent .profileText {
-    width: 520px;
-  }
-}
 @media screen and (max-width: 768px) {
   .profile .profileContent .profileText {
     padding-bottom: 16px;
-    width: 305px;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 530px) {
   .profile .profileContent .profileText {
+    margin-right: 50px;
+    width: 350px;
     padding: 8px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .profile .profileContent .profileText {
-    width: 250px;
   }
 }
 .profile .profileContent .profileText:hover {
@@ -990,32 +994,10 @@ html {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 1540px) {
-  .profile .profileContent .profileImage img {
-    width: 520px;
-  }
+.profile .profileContent .profileImage img {
+  width: 100%;
 }
-@media screen and (max-width: 1300px) {
-  .profile .profileContent .profileImage img {
-    width: 450px;
-  }
-}
-@media screen and (max-width: 1080px) {
-  .profile .profileContent .profileImage img {
-    width: 400px;
-  }
-}
-@media screen and (max-width: 970px) {
-  .profile .profileContent .profileImage img {
-    width: 320px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .profile .profileContent .profileImage img {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 530px) {
   .profile .profileContent .profileImage img {
     width: 170px;
     position: absolute;
@@ -1062,7 +1044,7 @@ html {
     bottom: -50px;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 530px) {
   .profile .profileContent .figure3 {
     bottom: -160px;
   }
@@ -1410,7 +1392,7 @@ html {
 }
 @media screen and (max-width: 1540px) {
   .creators {
-    padding-left: 350px;
+    padding-left: 260px;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -1426,6 +1408,7 @@ html {
 @media screen and (max-width: 970px) {
   .creators {
     padding-right: 56px;
+    padding-left: 150px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1455,14 +1438,22 @@ html {
   left: 15px;
   top: 138px;
 }
+.creators .creators-image img {
+  width: 807px;
+}
 @media screen and (max-width: 1540px) {
   .creators .creators-image img {
     width: 600px;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
   .creators .creators-image img {
     width: 400px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .creators .creators-image img {
+    width: 250px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1931,7 +1922,7 @@ html {
     width: 16px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   .footer .contact .contact-flex div img {
     width: 10px;
   }
