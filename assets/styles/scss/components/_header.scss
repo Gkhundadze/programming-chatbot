@@ -53,8 +53,30 @@
     }
 
     .nav {
+        @media screen and (min-width: 769px){
+            height: auto !important;
+        }
         @include tablet {
-            display: none;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            background-color: #1D1D1D;
+            height: 0;
+            transition: .3s;
+            padding-inline: 56px;
+            z-index: 1;
+            ul{
+                padding: 5px 0 15px 0;
+                flex-direction: column;
+            }
+        }
+        @include break(580px) {
+            padding-inline: 25px;
+        }
+        @include break(470px) {
+            padding-inline: 16px;
         }
         ul {
             display: flex;
@@ -78,7 +100,10 @@
                 }
 
                 @include tablet {
-                    font-size: 12px;
+                    font-size: 15px;
+                    display: block;
+                    padding: 17px 0 13px 0;
+                    align-items: center;
                 }
 
                 color: #FFFFFF;
@@ -94,14 +119,26 @@
                     background-color: $green;
                     transition: $transition;
 
-                    @include laptop {
-                        height: 2px;
+                    @include tablet {
+                        left: -10px;
+                        width: 2px !important;
+                        height: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                @include tablet {
+                    &:hover {
+                        color: $green;
+                        &::before {
+                            height: 70%;
+                        }
                     }
                 }
 
                 &:hover {
                     color: $green;
-
                     &::before {
                         width: 70%;
                     }
@@ -110,7 +147,7 @@
             }
         }
     }
-    .openNavbar {
+    .navbar {
         display: none;
         @include tablet {
             cursor: pointer;
