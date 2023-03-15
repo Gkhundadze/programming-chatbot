@@ -37,3 +37,18 @@ data.forEach((item) => {
 })
 
 communication_container.innerHTML = container;
+
+let openNavbar = document.querySelector('.openNavbar');
+let nav_ul = document.querySelector('.nav_ul');
+let nav = document.querySelector('.nav');
+
+openNavbar.addEventListener('click', function() {
+    nav.clientHeight == 0 ? nav.style.height = `${nav_ul.clientHeight}px` : nav.style.height = 0;
+})
+
+let links = document.querySelectorAll('.link');
+links.forEach((link) => {
+    link.addEventListener('click', function(){
+        nav.style.height = 0;
+    })
+})

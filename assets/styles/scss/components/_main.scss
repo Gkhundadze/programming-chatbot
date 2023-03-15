@@ -84,9 +84,12 @@
         }
 
         .discoveryNews{
-            max-width: 870px;
+            max-width: 871px;
             @include container;
 
+            @include tablet {
+                max-width: 660px;
+            }
 
             @include break(410px) {
                 padding: 6px;
@@ -159,21 +162,22 @@
 
         .discoveryImage {
             img{
-                @include laptop {
-                    width: 480px;
-                }
+                width: 100%;
+                // @include laptop {
+                //     width: 480px;
+                // }
     
-                @include break(1300px) {
-                    width: 380px;
-                }
+                // @include break(1300px) {
+                //     width: 380px;
+                // }
     
-                @include break(1060px) {
-                    width: 300px;
-                }
+                // @include break(1060px) {
+                //     width: 300px;
+                // }
     
-                @include break(660px) {
-                    width: 185px;
-                }
+                // @include break(660px) {
+                //     width: 185px;
+                // }
             }
 
             .mobile-discoveryBtn {
@@ -213,25 +217,30 @@
     padding-inline: var(--padding-section);
 
     .whoAmI-image{
+        @include break(520px) {
+            margin-inline: 45px;
+        }
         img {
-            @include laptop {
-                width: 430px;
-            }
+            width: 100%;
 
-            @include break(1300px) {
-                width: 370px;
-            }
+            // @include laptop {
+            //     width: 430px;
+            // }
 
-            @include break(1060px) {
-                width: 316px;
-            }
+            // @include break(1300px) {
+            //     width: 370px;
+            // }
 
-            @include break(710px) {
-                width: 210px;
-            }
-            @include break(520px) {
-                width: 240px;
-            }
+            // @include break(1060px) {
+            //     width: 316px;
+            // }
+
+            // @include break(710px) {
+            //     width: 210px;
+            // }
+            // @include break(520px) {
+            //     width: 240px;
+            // }
         }
     }
     .whoAmI-content{
@@ -287,11 +296,10 @@
             }
             @include tablet {
                 padding: 16px 30px 20px 16px;
-                max-width: 300px;
+                max-width: 500px;
             }
             @include break(520px) {
                 padding: 12px 8px 14px 8px;
-                max-width: 100%;
             }
 
             h2{
@@ -346,7 +354,7 @@
         padding-top: 100px;
     }
 
-    @include break(520px) {
+    @include break(530px) {
         padding-top: 65px;
         padding-bottom: 90px;
     }
@@ -359,20 +367,15 @@
         .profileText{
             @include container;
             width: 610px;
-            @include laptop{
-                width: 520px;
-            }
             @include tablet {
                 padding-bottom: 16px;
-                width: 305px;
+
             }
             
-                        @include break(520px) {
-                            padding: 8px;
-                        }
-
-            @include break(400px) {
-                width: 250px;
+            @include break(530px) {
+                margin-right: 50px;
+                width: 350px;
+                padding: 8px;
             }
 
             &:hover{
@@ -446,25 +449,26 @@
         }
         .profileImage{
             img{
-                @include laptop {
-                    width: 520px;
-                }
-                @include break(1300px) {
-                    width: 450px;
-                }
+                width: 100%;
+                // @include laptop {
+                //     width: 520px;
+                // }
+                // @include break(1300px) {
+                //     width: 450px;
+                // }
 
-                @include break(1080px) {
-                    width: 400px;
-                }
-                @include break(970px) {
-                    width: 320px;
-                }
+                // @include break(1080px) {
+                //     width: 400px;
+                // }
+                // @include break(970px) {
+                //     width: 320px;
+                // }
                 
-                @include break(700px) {
-                    width: 200px;
-                }
+                // @include break(700px) {
+                //     width: 200px;
+                // }
 
-                @include break(515px) {
+                @include break(530px) {
                     width: 170px;
                     position: absolute;
                     right: 0;
@@ -483,7 +487,7 @@
                 bottom: -50px;
             }
 
-            @include break(520px) {
+            @include break(530px) {
                 bottom: -160px;
             }
         }
@@ -712,7 +716,7 @@
     }
 
     @include laptop {
-        padding-left: 350px;
+        padding-left: 260px;
     }
 
     @include break(1300px) {
@@ -725,6 +729,7 @@
 
     @include break(970px) {
         padding-right: 56px;
+        padding-left: 150px;
     }
 
     @include tablet {
@@ -751,12 +756,19 @@
         top: 138px;
 
         img {
+            width: 807px;
             @include laptop {
                 width: 600px;
             }
-            @include break(1100px) {
+            @include break(1150px) {
                 width: 400px;
             }
+
+            @include break(970px) {
+                width: 250px;
+            }
+
+
             @include tablet {
                 display: none;
             }
