@@ -27,7 +27,7 @@ data.forEach((item) => {
     container += 
         `<div class='communication_item'>
             <div class='communication_img ${className}'>
-                <img src=${img} alt='img'>
+                <img src=${img} alt='communicationImg'>
             </div>
             <div>
                 <h3>${title}</h3>
@@ -38,17 +38,31 @@ data.forEach((item) => {
 
 communication_container.innerHTML = container;
 
-let openNavbar = document.querySelector('.openNavbar');
+let openNavbar = document.querySelector('.navbar');
 let nav_ul = document.querySelector('.nav_ul');
 let nav = document.querySelector('.nav');
+let header =document.querySelector('.header');
 
 openNavbar.addEventListener('click', function() {
     nav.clientHeight == 0 ? nav.style.height = `${nav_ul.clientHeight}px` : nav.style.height = 0;
+    openNavbar.classList.toggle('active');
+
 })
+
+let bar = document.querySelector('.bar')
+window.addEventListener('click', function(e) {
+    let className = e.target.className;
+    if(className != 'nav' && className != 'header' && className != 'nav_ul' && className !='bar' && className != bar.closest('.navbar').className){
+        nav.style.height = 0
+        openNavbar.classList.remove('active');
+    }
+})
+
 
 let links = document.querySelectorAll('.link');
 links.forEach((link) => {
     link.addEventListener('click', function(){
+        openNavbar.classList.remove('active')
         nav.style.height = 0;
     })
 })

@@ -225,11 +225,29 @@ html {
 }
 .header .navbar {
   display: none;
+  cursor: pointer;
+}
+.header .navbar .bar {
+  display: block;
+  border-radius: 5px;
+  width: 35px;
+  height: 3px;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 @media screen and (max-width: 768px) {
   .header .navbar {
-    cursor: pointer;
     display: block;
+  }
+  .header .navbar.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .header .navbar.active .bar:nth-child(1) {
+    transform: translateY(14px) rotate(45deg);
+  }
+  .header .navbar.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
@@ -250,6 +268,9 @@ html {
   z-index: 999;
   bottom: 96px;
   right: 96px;
+}
+.message-square img {
+  transition: 0.1s;
 }
 @media screen and (max-width: 1540px) {
   .message-square img {
@@ -715,6 +736,7 @@ html {
   padding: 20px 20px 20px 20px;
   background-color: rgba(61, 105, 150, 0.1);
   border-radius: 20px;
+  transition: 0.2s;
 }
 @media screen and (max-width: 768px) {
   .whoAmI .whoAmI-content .whoAmI-text {
@@ -886,6 +908,7 @@ html {
   background-color: rgba(61, 105, 150, 0.1);
   border-radius: 20px;
   width: 610px;
+  transition: 0.2s;
 }
 @media screen and (max-width: 768px) {
   .profile .profileContent .profileText {
@@ -1466,7 +1489,6 @@ html {
   width: 1184px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  transition: 0.2s;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
@@ -1518,6 +1540,7 @@ html {
 .creators .creators-container .creators-item {
   padding: 20px;
   background-color: rgba(61, 105, 150, 0.1);
+  transition: 0.2s;
 }
 @media screen and (max-width: 960px) {
   .creators .creators-container .creators-item {
@@ -1553,6 +1576,7 @@ html {
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
+  transition: 0.2s;
 }
 @media screen and (max-width: 1540px) {
   .creators .creators-container .creators-item .creators-icon {
@@ -1838,6 +1862,7 @@ html {
   }
 }
 .footer p {
+  transition: 0.2s;
   font-size: 20px;
   line-height: 24px;
   color: #fff;
@@ -1910,6 +1935,7 @@ html {
   }
 }
 .footer .contact .contact-flex div img {
+  transition: 0.2s;
   position: relative;
 }
 @media screen and (max-width: 1540px) {
