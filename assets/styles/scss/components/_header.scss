@@ -149,9 +149,29 @@
     }
     .navbar {
         display: none;
-        @include tablet {
-            cursor: pointer;
+        cursor: pointer;
+        .bar{
             display: block;
+            border-radius: 5px;
+            width: 35px;
+            height: 3px;
+            margin: 8px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            background-color: white;
+        }
+        @include tablet{
+            display: block;
+            &.active{
+                .bar:nth-child(2) {
+                    opacity: 0;
+                }
+                .bar:nth-child(1) {
+                    transform: translateY(14px) rotate(45deg);
+                }
+                .bar:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
         }
     }
 }

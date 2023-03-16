@@ -15,6 +15,7 @@
     bottom: 96px;
     right: 96px;
     img {
+        transition: 0.1s;
         @include laptop{
             position: fixed;
             width: 40px;
@@ -163,21 +164,6 @@
         .discoveryImage {
             img{
                 width: 100%;
-                // @include laptop {
-                //     width: 480px;
-                // }
-    
-                // @include break(1300px) {
-                //     width: 380px;
-                // }
-    
-                // @include break(1060px) {
-                //     width: 300px;
-                // }
-    
-                // @include break(660px) {
-                //     width: 185px;
-                // }
             }
 
             .mobile-discoveryBtn {
@@ -222,25 +208,6 @@
         }
         img {
             width: 100%;
-
-            // @include laptop {
-            //     width: 430px;
-            // }
-
-            // @include break(1300px) {
-            //     width: 370px;
-            // }
-
-            // @include break(1060px) {
-            //     width: 316px;
-            // }
-
-            // @include break(710px) {
-            //     width: 210px;
-            // }
-            // @include break(520px) {
-            //     width: 240px;
-            // }
         }
     }
     .whoAmI-content{
@@ -291,6 +258,7 @@
         .whoAmI-text{
             max-width: 890px;
             @include container;
+            transition: 0.2s;
             &:hover{
                 background-color: #3D699626;
             }
@@ -367,6 +335,7 @@
         .profileText{
             @include container;
             width: 610px;
+            transition: 0.2s;
             @include tablet {
                 padding-bottom: 16px;
 
@@ -450,23 +419,6 @@
         .profileImage{
             img{
                 width: 100%;
-                // @include laptop {
-                //     width: 520px;
-                // }
-                // @include break(1300px) {
-                //     width: 450px;
-                // }
-
-                // @include break(1080px) {
-                //     width: 400px;
-                // }
-                // @include break(970px) {
-                //     width: 320px;
-                // }
-                
-                // @include break(700px) {
-                //     width: 200px;
-                // }
 
                 @include break(530px) {
                     width: 170px;
@@ -779,8 +731,8 @@
         width: 1184px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        transition: 0.2s;
         align-items: center;
+
         @include tablet {
             column-gap: 16px;
         }
@@ -830,6 +782,7 @@
         .creators-item{
             padding: 20px;
             background-color: rgba(61, 105, 150, 0.1);
+            transition: 0.2s;
             @include break(960px) {
                 padding: 10px;
             }
@@ -861,7 +814,7 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 32px;
-
+                transition: 0.2s;
                 @include laptop {
                     width: 70px;
                     height: 70px;
