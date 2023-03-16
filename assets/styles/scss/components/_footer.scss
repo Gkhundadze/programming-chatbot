@@ -106,6 +106,7 @@
         }
     }
     p{
+        transition: 0.2s;
         @include container-p2(24px);
     }
 
@@ -124,7 +125,7 @@
                 margin-top: 8px;
             }
 
-            div{
+            div{   
                 display: flex;
                 align-items: center;
                 column-gap: 20px;
@@ -139,7 +140,9 @@
                 @include break(550px) {
                     column-gap: 5px;
                 }
+
                 img{
+                    transition: 0.2s;
                     position: relative;
                     @include laptop {
                         width: 20px;
