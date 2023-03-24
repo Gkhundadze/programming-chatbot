@@ -26,7 +26,7 @@
     }
     @include laptop{
         bottom: 120px;
-        right: 60px;
+        right: 60px
     }
     @include break(1100px) {
         width: 300px;

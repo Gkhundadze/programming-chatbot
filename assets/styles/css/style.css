@@ -279,21 +279,21 @@ html {
 }
 @media screen and (max-width: 1540px) {
   .chatbot__container {
-    bottom: 100px;
+    bottom: 120px;
     right: 60px;
   }
 }
 @media screen and (max-width: 1100px) {
   .chatbot__container {
     width: 300px;
-    bottom: 80px;
+    bottom: 90px;
     right: 40px;
   }
 }
 @media screen and (max-width: 768px) {
   .chatbot__container {
     width: 280px;
-    bottom: 50px;
+    bottom: 60px;
     right: 0px;
   }
 }
