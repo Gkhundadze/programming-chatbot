@@ -38,6 +38,8 @@ data.forEach((item) => {
 
 communication_container.innerHTML = container;
 
+
+//burgerMenu
 let openNavbar = document.querySelector('.navbar');
 let nav_ul = document.querySelector('.nav_ul');
 let nav = document.querySelector('.nav');
@@ -64,5 +66,16 @@ links.forEach((link) => {
     link.addEventListener('click', function(){
         openNavbar.classList.remove('active')
         nav.style.height = 0;
+    })
+})
+
+
+//chatBot
+let openChatBot = document.querySelectorAll('.openChatBot');
+let chatbot__container = document.querySelector('.chatbot__container');
+
+openChatBot.forEach((item) => {
+    item.addEventListener('click', () => {
+        chatbot__container.classList.toggle('active');
     })
 })
