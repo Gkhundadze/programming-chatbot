@@ -4,7 +4,9 @@
     height: 140px;
     background-color: $bg-color;
     padding-inline: var(--padding-section);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     @include flex-spaceBetween;
     z-index: 999;
 
@@ -64,12 +66,17 @@
             position: absolute;
             background-color: #1D1D1D;
             height: 0;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
             transition: .3s;
             padding-inline: 56px;
             z-index: 1;
             ul{
                 padding: 5px 0 15px 0;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
             }
         }
         @include break(580px) {
@@ -79,11 +86,17 @@
             padding-inline: 16px;
         }
         ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            column-gap: 54px;
+            -webkit-column-gap: 54px;
+               -moz-column-gap: 54px;
+                    column-gap: 54px;
 
             @include break(1100px) {
-                column-gap: 36px;
+                -webkit-column-gap: 36px;
+                   -moz-column-gap: 36px;
+                        column-gap: 36px;
             }
 
             a {
@@ -103,11 +116,15 @@
                     font-size: 15px;
                     display: block;
                     padding: 17px 0 13px 0;
-                    align-items: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                 }
 
                 color: #FFFFFF;
                 position: relative;
+                -webkit-transition: $transition;
+                -o-transition: $transition;
                 transition: $transition;
 
                 &::before {
@@ -117,6 +134,8 @@
                     height: 3px;
                     bottom: -5px;
                     background-color: $green;
+                    -webkit-transition: $transition;
+                    -o-transition: $transition;
                     transition: $transition;
 
                     @include tablet {
@@ -124,7 +143,9 @@
                         width: 2px !important;
                         height: 0;
                         top: 50%;
-                        transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                            -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
                     }
                 }
 
@@ -166,10 +187,14 @@
                     opacity: 0;
                 }
                 .bar:nth-child(1) {
-                    transform: translateY(14px) rotate(45deg);
+                    -webkit-transform: translateY(14px) rotate(45deg);
+                        -ms-transform: translateY(14px) rotate(45deg);
+                            transform: translateY(14px) rotate(45deg);
                 }
                 .bar:nth-child(3) {
-                    transform: translateY(-8px) rotate(-45deg);
+                    -webkit-transform: translateY(-8px) rotate(-45deg);
+                        -ms-transform: translateY(-8px) rotate(-45deg);
+                            transform: translateY(-8px) rotate(-45deg);
                 }
             }
         }

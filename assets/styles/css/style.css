@@ -157,12 +157,12 @@ html {
 .header .nav ul {
   display: flex;
   -moz-column-gap: 54px;
-       column-gap: 54px;
+  column-gap: 54px;
 }
 @media screen and (max-width: 1100px) {
   .header .nav ul {
     -moz-column-gap: 36px;
-         column-gap: 36px;
+    column-gap: 36px;
   }
 }
 .header .nav ul a {
@@ -406,13 +406,13 @@ html {
   display: flex;
   justify-content: space-between;
   -moz-column-gap: var(--container-gap);
-       column-gap: var(--container-gap);
+  column-gap: var(--container-gap);
   align-items: center;
 }
 @media screen and (max-width: 410px) {
   .discovery .discoveryContent {
     -moz-column-gap: 3px;
-         column-gap: 3px;
+    column-gap: 3px;
   }
 }
 .discovery .discoveryContent .discoveryNews {
@@ -673,7 +673,7 @@ html {
   align-items: center;
   position: relative;
   -moz-column-gap: var(--container-gap);
-       column-gap: var(--container-gap);
+  column-gap: var(--container-gap);
 }
 @media screen and (max-width: 520px) {
   .whoAmI .whoAmI-content {
@@ -941,7 +941,7 @@ html {
   justify-content: space-between;
   align-items: center;
   -moz-column-gap: var(--container-gap);
-       column-gap: var(--container-gap);
+  column-gap: var(--container-gap);
 }
 .profile .profileContent .profileText {
   padding: 20px 20px 20px 20px;
@@ -984,12 +984,12 @@ html {
   display: flex;
   align-items: flex-end;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 @media screen and (max-width: 768px) {
   .profile .profileContent .profileText .profileObject div {
     -moz-column-gap: 8px;
-         column-gap: 8px;
+    column-gap: 8px;
   }
 }
 @media screen and (max-width: 1540px) {
@@ -1174,7 +1174,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
 }
 @media screen and (max-width: 720px) {
   .communication .communication_content .communication_container {
@@ -1227,7 +1227,7 @@ html {
   .communication .communication_content .communication_container .communication_item {
     width: 168px;
     -moz-column-gap: 16px;
-         column-gap: 16px;
+    column-gap: 16px;
   }
 }
 .communication .communication_content .communication_container .communication_item:nth-child(1) {
@@ -1534,7 +1534,7 @@ html {
 @media screen and (max-width: 768px) {
   .creators .creators-container {
     -moz-column-gap: 16px;
-         column-gap: 16px;
+    column-gap: 16px;
   }
 }
 @media screen and (max-width: 670px) {
@@ -1747,13 +1747,13 @@ html {
     padding: 16px 0 22px 0;
     justify-content: center;
     -moz-column-gap: 45px;
-         column-gap: 45px;
+    column-gap: 45px;
   }
 }
 @media screen and (max-width: 620px) {
   .footer {
     -moz-column-gap: 0px;
-         column-gap: 0px;
+    column-gap: 0px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -1954,24 +1954,24 @@ html {
   display: flex;
   align-items: center;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 @media screen and (max-width: 1540px) {
   .footer .contact .contact-flex div {
     -moz-column-gap: 15px;
-         column-gap: 15px;
+    column-gap: 15px;
   }
 }
 @media screen and (max-width: 768px) {
   .footer .contact .contact-flex div {
     -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
   }
 }
 @media screen and (max-width: 550px) {
   .footer .contact .contact-flex div {
     -moz-column-gap: 5px;
-         column-gap: 5px;
+    column-gap: 5px;
   }
 }
 .footer .contact .contact-flex div img {
