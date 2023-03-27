@@ -1,8 +1,12 @@
 .footer{
     position: relative;
     margin-top: 740px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     background-color: rgba(29, 29, 29, 1);
     padding: 70px 0;
     @include laptop {
@@ -17,12 +21,18 @@
     @include tablet {
         margin-top: 108px;
         padding: 16px 0 22px 0;
-        justify-content: center;
-        column-gap: 45px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-column-gap: 45px;
+           -moz-column-gap: 45px;
+                column-gap: 45px;
     }
 
     @include break(620px) {
-        column-gap: 0px;
+        -webkit-column-gap: 0px;
+           -moz-column-gap: 0px;
+                column-gap: 0px;
     }
 
     @include break(520px) {
@@ -106,12 +116,16 @@
         }
     }
     p{
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
         transition: 0.2s;
         @include container-p2(24px);
     }
 
     .contact{
         .contact-flex{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-top: 35px;
             @include laptop {
@@ -126,22 +140,36 @@
             }
 
             div{   
+                display: -webkit-box;   
+                display: -ms-flexbox;   
                 display: flex;
-                align-items: center;
-                column-gap: 20px;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-column-gap: 20px;
+                   -moz-column-gap: 20px;
+                        column-gap: 20px;
                 @include laptop {
-                    column-gap: 15px;
+                    -webkit-column-gap: 15px;
+                       -moz-column-gap: 15px;
+                            column-gap: 15px;
                 }
 
                 @include tablet {
-                    column-gap: 10px;
+                    -webkit-column-gap: 10px;
+                       -moz-column-gap: 10px;
+                            column-gap: 10px;
                 }
 
                 @include break(550px) {
-                    column-gap: 5px;
+                    -webkit-column-gap: 5px;
+                       -moz-column-gap: 5px;
+                            column-gap: 5px;
                 }
 
                 img{
+                    -webkit-transition: 0.2s;
+                    -o-transition: 0.2s;
                     transition: 0.2s;
                     position: relative;
                     @include laptop {
@@ -157,7 +185,8 @@
                 }
                 &:hover{
                     img{
-                        filter: hue-rotate(10deg) brightness(0.7) contrast(1.4);
+                        -webkit-filter: hue-rotate(10deg) brightness(0.7) contrast(1.4);
+                                filter: hue-rotate(10deg) brightness(0.7) contrast(1.4);
                     }
                     p{
                         font-weight: 700;
